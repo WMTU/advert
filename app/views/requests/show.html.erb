@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticket:</strong>
+  <%= @request.ticket %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @request.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @request.phone %>
+</p>
+
+<p>
+  <strong>Org:</strong>
+  <%= @request.org %>
+</p>
+
+<p>
+  <strong>Date start:</strong>
+  <%= @request.date_start %>
+</p>
+
+<p>
+  <strong>Date end:</strong>
+  <%= @request.date_end %>
+</p>
+
+<p>
+  <strong>Date submitted:</strong>
+  <%= @request.date_submitted %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @request.info %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
