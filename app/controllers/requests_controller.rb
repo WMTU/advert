@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+  before_filter :authorize
   before_action :set_request, only: [:show, :edit, :update, :destroy]
 
   # GET /requests
