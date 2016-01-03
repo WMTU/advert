@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'users/new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
@@ -11,4 +12,7 @@ Rails.application.routes.draw do
   resources :requests
 
   root 'requests#index'
+
+  resources :settings
+  get 'settings/index'
 end
