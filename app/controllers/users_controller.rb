@@ -4,10 +4,10 @@ class UsersController < ApplicationController
       @user = User.all
       #authorize! :index, User
 
-    #  respond_to do |format|
-    #    format.html # index.html.erb
-    #    format.json { render json: @users }
-
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @users }
+      end
   end
 
 
@@ -16,10 +16,10 @@ class UsersController < ApplicationController
     def show
       #authorize! :show, @user
 
-    #  respond_to do |format|
-    #    format.html # show.html.erb
-    #    format.json { render json: @user }
-
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @user }
+      end
     end
 
 
@@ -58,6 +58,6 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :role)
   end
 end
