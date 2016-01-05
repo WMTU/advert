@@ -7,7 +7,7 @@ class Ability
         can :manage, :all
       elsif user.role == "manager"
         can [:index, :show], Setting
-        can [:index, :show, :new, :edit, :create, :update], [User, Requester]
+        can [:index, :show, :new, :edit, :create, :update], User
         can [:complete, :close], Request
       elsif user.role == "requester"
         can [:show, :edit, :update, :destroy]. User, :id => user.id
