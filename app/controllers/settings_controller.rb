@@ -1,6 +1,7 @@
 class SettingsController < ApplicationController
   before_action :set_settings, only: [:edit, :update, :show]
   def index
+    authorize! :index, Setting
   @settings = Setting.all
   @setting = Setting.new
   end

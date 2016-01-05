@@ -15,4 +15,7 @@ Rails.application.routes.draw do
 
   resources :settings
   get 'settings/index'
+  
+  resources :users
+  get '/manage' => 'users#index'
 end
