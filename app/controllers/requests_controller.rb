@@ -68,8 +68,9 @@ class RequestsController < ApplicationController
       @request = Request.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:ticket, :email, :name, :phone, :org, :date_start, :date_end, :date_submitted, :info)
+      params.require(:request).permit(:ticket, :email, :name, :phone, :org, :date_start, :date_end, :date_submitted, :info, :status)
     end
 end
